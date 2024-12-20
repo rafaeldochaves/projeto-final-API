@@ -1,0 +1,28 @@
+<div class="register container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="register-box p-4 rounded shadow">
+    <h2 class="text-center mb-4">Cadastro</h2>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div class="form-group">
+        <input type="text" class="form-control form-control-lg" placeholder="Nome" [(ngModel)]="user.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control form-control-lg" placeholder="Email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control form-control-lg" placeholder="Senha" [(ngModel)]="user.password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+      <!-- Mensagens de Sucesso ou Erro -->
+      <div *ngIf="successMessage" class="alert alert-success mt-3">
+        {{ successMessage }}
+      </div>
+      <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+        {{ errorMessage }}
+      </div>
+    </form>
+    <p class="account-link">
+      Já tem uma conta? 
+      <button (click)="navigateToLogin()" class="btn-secondary">Faça login</button>
+    </p>
+  </div>
+</div>

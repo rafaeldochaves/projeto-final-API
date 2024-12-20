@@ -1,0 +1,28 @@
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Logo com link para página inicial -->
+    <a class="navbar-brand" href="#" (click)="goToHome()">GameMania</a>
+
+    <!-- Navbar Toggler para dispositivos menores -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Barra de navegação e conteúdo colapsado -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Barra de pesquisa -->
+      <div class="d-flex flex-grow-1 me-4">
+        <input type="text" class="form-control me-2" placeholder="Buscar produtos..." />
+        <button class="btn btn-outline-primary">Buscar</button>
+      </div>
+
+      <!-- Ações de Login e Carrinho -->
+      <div class="d-flex gap-4">
+        <button *ngIf="!isLoggedIn" class="btn btn-link" (click)="navigateToLogin()">Login</button>
+        <button *ngIf="isLoggedIn" class="btn btn-link" (click)="navigateToProfile()">Meu Perfil</button>
+        <button *ngIf="isLoggedIn" class="btn btn-link" (click)="logout()">Sair</button>
+        <button class="btn btn-link" (click)="navigateToCart()">Carrinho</button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Philippe Correia",
+      "email": "philippe.santos@senaisp.edu.br",
+      "password": "1234",
+      "phone": "123456789"
+    },
+    {
+      "id": "2",
+      "name": "Ana Beatriz",
+      "email": "ana.beatriz@senaisp.edu.br",
+      "password": "123456",
+      "phone": "123456789"
+    },
+    {
+      "id": "fa6d",
+      "name": "João Silva Pedroso",
+      "email": "joao.silva@usuario.com",
+      "password": "123"
+    },
+    {
+      "id": "07e1",
+      "name": "Maria Sebastiana",
+      "email": "sebastiana@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "40cf",
+      "name": "Mariana Costa",
+      "email": "mcosta@gmail.com",
+      "password": "admin"
+    },
+    {
+      "id": "f0c9",
+      "name": "Gabriel Silva",
+      "email": "gabriel@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "b630",
+      "name": "Rafael Chaves",
+      "email": "rafaelchaves@gmail.com",
+      "password": "123456"
+    }
+  ]
+}

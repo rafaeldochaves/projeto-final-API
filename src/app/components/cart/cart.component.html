@@ -1,0 +1,49 @@
+<section class="cart-container container py-4">
+  <h2 class="text-center mb-4">Seu Carrinho</h2>
+
+  <div *ngIf="cart.length > 0; else emptyCart">
+    <table class="table table-bordered table-striped table-dark">
+      <thead class="bg-secondary text-white">
+        <tr>
+          <th scope="col">Produto</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Total</th>
+          <th scope="col">Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of cart">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency:'BRL':'symbol':'1.2-2' }}</td>
+          <td>
+            <div class="quantity-container d-flex align-items-center gap-2">
+              <label for="quantity" class="mb-0">Quantidade:</label>
+              <input 
+                id="quantity" 
+                type="number" 
+                [(ngModel)]="product.quantity" 
+                (change)="updateQuantity(product, product.quantity)" 
+                class="form-control form-control-sm w-25" 
+                min="1" />
+            </div>
+          </td>
+          <td>{{ (product.price * product.quantity) | currency:'BRL' }}</td>
+          <td>
+            <button class="delete-button btn btn-link p-0" (click)="removeFromCart(product)">
+              <img src="assets/images/delete-icon.svg" alt="Remover" width="20" height="20">
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-total text-end">
+      <h3>Total: {{ getTotal() | currency:'BRL':'symbol':'1.2-2' }}</h3>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <p class="text-center">Seu carrinho está vazio.</p>
+  </ng-template>
+</section>

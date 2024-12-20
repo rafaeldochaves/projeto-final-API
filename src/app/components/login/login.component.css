@@ -1,0 +1,144 @@
+/* Corpo da página */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #1e1e2f; /* Cor de fundo escura consistente com o tema */
+  margin: 0;
+  padding: 0;
+  color: #fff; /* Cor do texto branca para contraste */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container do login/cadastro */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Fundo escuro com transparência para contraste */
+}
+
+/* Caixa do formulário de login/cadastro */
+.login-box {
+  background: #262637; /* Cor mais sóbria que combina melhor com o tema */
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidade */
+  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Título */
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #82e7c1; /* Cor de neon suave para destacar o título */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo dos inputs */
+input.form-control {
+  background: #333543; /* Cor escura mais suave nos inputs */
+  border: 2px solid #444;
+  color: #f2f2f2; /* Cor do texto já escrito em branco */
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Cor do placeholder */
+input.form-control::placeholder {
+  color: #f2f2f2; /* Texto do placeholder em branco */
+  opacity: 0.7; /* Opacidade do placeholder para um efeito mais suave */
+}
+
+/* Efeito de foco nos inputs */
+input.form-control:focus {
+  border-color: #82e7c1; /* Cor de destaque no foco */
+  box-shadow: 0 0 10px rgba(130, 231, 193, 0.5);
+  background: #3a3a4d; /* Aumento do brilho e escurecimento do fundo ao focar */
+}
+
+/* Botão de Login */
+button.btn-primary {
+  background-color: #6f8c99; /* Cor mais escura por padrão */
+  border: none;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Efeito de hover no botão de Login */
+button.btn-primary:hover {
+  background-color: #82e7c1; /* Cor mais clara ao passar o mouse */
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(130, 231, 193, 0.6); /* Sombra suave no hover */
+}
+
+/* Botão de Cadastro (Cadastre-se) - Estilo Consistente */
+button.btn-secondary {
+  background-color: #444e59; /* Cor escura para o botão de cadastro */
+  border: none;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px; /* Margem para separar o botão de login do botão de cadastro */
+}
+
+/* Efeito de hover no botão de Cadastro (Cadastre-se) */
+button.btn-secondary:hover {
+  background-color: #82e7c1; /* Cor mais clara ao passar o mouse */
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(130, 231, 193, 0.6); /* Sombra suave no hover */
+}
+
+/* Link de Cadastro */
+p.account-link {
+  color: #82e7c1; /* Cor neon para o link "Cadastre-se" */
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 0px 0px 10px rgba(130, 231, 193, 0.8); /* Efeito de brilho */
+}
+
+/* Efeito de hover no link "Cadastre-se" */
+p.account-link:hover {
+  color: #4ec7b9; /* Cor mais clara ao passar o mouse */
+  text-shadow: 0px 0px 15px rgba(130, 231, 193, 1); /* Intensifica o brilho */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button.btn-primary {
+    font-size: 16px;
+  }
+
+  button.btn-secondary {
+    font-size: 16px;
+  }
+
+  input.form-control {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1b1b29, #2a2a3e);
+    color: #fff;
+  }
+  
+  section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  input, button {
+    border-radius: 5px;
+  }
+  

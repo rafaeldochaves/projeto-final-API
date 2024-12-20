@@ -1,0 +1,81 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e2f; /* Cor de fundo futurista escura */
+  color: #fff; /* Cor do texto clara */
+  border-bottom: 1px solid #444; /* Linha de borda mais sutil */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff; /* Cor clara para o logo */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #444; /* Borda mais escura para a caixa de pesquisa */
+  background-color: #2c2c3c; /* Fundo escuro para o campo de pesquisa */
+  color: #fff; /* Texto claro dentro da caixa */
+  transition: border-color 0.3s ease; /* Transição suave ao focar */
+}
+
+.search-bar input:focus {
+  border-color: #5757f7; /* Cor futurista ao focar na caixa de pesquisa */
+  outline: none;
+}
+
+/* Estilo para os botões */
+button {
+  padding: 8px 15px;
+  border: none;
+  color: white; /* Garante que a cor do texto seja branca */
+  background-color: #3a3a4d; /* Cor de fundo futurista para os botões */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  text-decoration: none; /* Remove o sublinhado, caso esteja presente */
+}
+
+button:hover {
+  background-color: #5757f7; /* Cor ao passar o mouse para os botões */
+  color: white; /* Garante que o texto continue branco no hover */
+}
+
+/* Estilo específico para os botões de ações (Login, Carrinho, etc.) */
+.actions button {
+  margin-left: 10px;
+  font-size: 16px;
+  color: white; /* Garante que o texto seja branco */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo adicional para os botões de ação */
+.action-button {
+  background-color: #3a3a4d; /* Cor de fundo para os botões de ação */
+  margin-left: 10px;
+  color: white; /* Garante que o texto seja branco */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.action-button:hover {
+  background-color: #5757f7; /* Cor de hover mais forte para os botões de ação */
+  color: white; /* Garante que o texto continue branco no hover */
+}
+
+/* Adiciona uma cor de fundo quando o botão é clicado para manter o estilo consistente */
+button:active {
+  background-color: #5757f7; /* Cor ao clicar no botão */
+  color: white; /* Garante que o texto permaneça branco */
+}

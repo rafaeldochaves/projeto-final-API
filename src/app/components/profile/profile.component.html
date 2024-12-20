@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h1 class="mb-4">Meu Perfil</h1>
+  
+    <!-- Visualização dos dados -->
+    <div *ngIf="!isEditing">
+      <p><strong>Nome:</strong> {{ currentUser?.name }}</p>
+      <p><strong>Email:</strong> {{ currentUser?.email }}</p>
+      <p><strong>Telefone:</strong> {{ currentUser?.phone || 'Não informado' }}</p>
+  
+      <button class="btn btn-primary me-2" (click)="enableEditMode()">Editar</button>
+      <button class="btn btn-danger" (click)="deleteProfile()">Excluir Conta</button>
+    </div>
+  
+    <!-- Formulário de edição -->
+    <form *ngIf="isEditing" (ngSubmit)="updateProfile()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input id="name" type="text" class="form-control" [(ngModel)]="updatedUser.name" name="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" class="form-control" [(ngModel)]="updatedUser.email" name="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Telefone</label>
+        <input id="phone" type="text" class="form-control" [(ngModel)]="updatedUser.phone" name="phone" />
+      </div>
+      <button type="submit" class="btn btn-success me-2">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancelar</button>
+    </form>
+  </div>
+  
