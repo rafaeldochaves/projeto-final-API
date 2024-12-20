@@ -19,19 +19,19 @@
           <td>
             <div class="quantity-container d-flex align-items-center gap-2">
               <label for="quantity" class="mb-0">Quantidade:</label>
-              <input 
-                id="quantity" 
-                type="number" 
-                [(ngModel)]="product.quantity" 
-                (change)="updateQuantity(product, product.quantity)" 
-                class="form-control form-control-sm w-25" 
+              <input
+                id="quantity"
+                type="number"
+                [(ngModel)]="product.quantity"
+                (change)="updateQuantity(product, product.quantity)"
+                class="form-control form-control-sm w-25"
                 min="1" />
             </div>
           </td>
           <td>{{ (product.price * product.quantity) | currency:'BRL' }}</td>
           <td>
             <button class="delete-button btn btn-link p-0" (click)="removeFromCart(product)">
-              <img src="assets/images/delete-icon.svg" alt="Remover" width="20" height="20">
+              <img src="delete-icon.svg" alt="Remover" width="20" height="20">
             </button>
           </td>
         </tr>

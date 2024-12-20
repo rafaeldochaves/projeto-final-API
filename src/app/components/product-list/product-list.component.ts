@@ -11,9 +11,9 @@ import { CartService } from '../../services/cart.service';
 })
 export class ProductListComponent {
   products = [
-    { name: 'Produto 1', price: 2500, image: '../../../../public/xbox.jpg' },
-    { name: 'Produto 2', price: 5000, image: '../../../../public/ps5pro.jpg' },
-    { name: 'Produto 3', price: 10000, image: '../../../../public/pc.jpg' }
+    { name: 'X-Box', price: 2500, image: 'xbox.jpg' },
+    { name: 'Play Station 5', price: 5000, image: 'ps5pro.jpg' },
+    { name: 'PC Gamer', price: 10000, image: 'pc.jpg' }
   ];
 
   constructor(private cartService: CartService) {}
