@@ -5,6 +5,14 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  private loginStatus = new BehaviorSubject<boolean>(false);
+  
+
+  updateLoginStatus(status: boolean): void {
+    this.loginStatus.next(status);
+  }
+
+
   private loggedIn = new BehaviorSubject<boolean>(false); // Controla o estado de login
   currentLoginStatus = this.loggedIn.asObservable(); // Observable para monitorar o estado
 
@@ -24,4 +32,5 @@ export class AuthService {
   isLoggedIn(): boolean {
     return this.loggedIn.getValue();
   }
+
 }

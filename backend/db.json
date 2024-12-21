@@ -43,6 +43,12 @@
       "name": "Rafael Chaves",
       "email": "rafaelchaves@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "6b3f",
+      "name": "Daniela Cristina dos Santos",
+      "email": "danydcs@hotmail.com",
+      "password": "1234dcs"
     }
   ]
 }

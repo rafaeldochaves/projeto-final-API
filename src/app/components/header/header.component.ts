@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   imports: [CommonModule, FormsModule],
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
   currentUser: any = null;
@@ -25,7 +25,7 @@ export class HeaderComponent {
     }
 
     this.authService.currentLoginStatus.subscribe(status => {
-      this.isLoggedIn = status; 
+      this.isLoggedIn = status;
     });
   }
 
@@ -42,10 +42,10 @@ export class HeaderComponent {
   }
 
   logout(): void {
-    localStorage.removeItem('currentUser');
+    localStorage.removeItem('currentUser'); // Remove o usuário do armazenamento local
     this.currentUser = null;
-    this.router.navigate(['/']);
-    window.location.reload();
+    this.authService.updateLoginStatus(false); // Atualiza o estado de login no serviço
+    this.router.navigate(['/']); // Redireciona para a página inicial
   }
 
   goToHome(): void {
